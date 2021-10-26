@@ -1,0 +1,57 @@
+<div style="float: left; width: 50%;">
+
+    <form [formGroup]='signupForm' (ngSubmit)="onSubmit()" >
+        
+            <label for="firstname">First-Name</label>
+            <input type="text" id="firstname" class="form-control" placeholder=" Enter firstname" formControlName='firstName' 
+            [ngClass]="{'is-invalid':submit&&f.firstName.errors}">
+            <div *ngIf="submit&&f.firstName.errors" class="invalid-feedback">
+                <div *ngIf="f.firstName.errors.required">First name is required</div>
+            
+            
+              </div>
+              <label for="lastname">Last-Name</label>
+              <input type="text" id="lastname" class="form-control" placeholder="Enter Last-Name" formControlName='lastname'
+              [ngClass]="{'is-invalid':submit&&f.lastName.errors}">
+              <div *ngIf="submit&&f.lastName.errors" class="text-danger">
+                  <div *ngIf="f.lastName.errors.required">
+                    Last-Name is required
+                  </div>
+              </div>
+
+              
+        
+       <br>
+            <button type="submit" class="btn btn-danger">Submit</button>
+       </form>
+       
+
+       
+       </div>
+       
+       
+       
+       
+       
+       
+        <!-- <div *ngIf= "firstname?.valid&&(firstname?.dirty||firstname?.touched)">
+            <div [hidden]="!firstname?.errors.required">First-Name is required</div>
+            <div [hidden]="!firstname?.errors.minlength">Min Length is 10</div>
+            
+        </div>
+
+        <p>
+            <label for="lastname">Last-Name</label>
+            <input type="text" id='lastname' name='lastname' formControlName='lastname'>
+        </p>
+
+        <div *ngIf="!lastname?.valid&&(lastname.dirty||lastname.touched)">
+            <div [hidden]="!lastname?.errors.pattern"> Only Charecters are allowed  </div>
+            <div [hidden]="!lastname?.errors.maxLength"> Max length 10</div>
+            <div [hidden]="!lastname?.errors.required"> Last-Name required</div>
+        </div>
+
+        
+    </form>
+
+</div> -->
