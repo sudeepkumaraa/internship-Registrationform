@@ -19,6 +19,46 @@
                   </div>
               </div>
 
+              <label for="phone-number">Phone-Number</label>
+              <input type="number" id="phonenumber" placeholder="Enter Phone Number" formControlName='phone' class="form-control"
+              [ngClass]="{'is-invalid':submit&&f.phone.errors}" >
+              <div *ngIf="f.phone.errors.required" class="text-danger">
+                  <div *ngIf="f.phone.errors.required">
+                    Phone number is required
+                  </div>
+                  
+              </div>
+
+              <label for="Role">Enter Role:</label>
+              <input type="text" id="role" placeholder="Enter Role" formControlName='role' class="form-control"
+              [ngClass]="{'is-invalid':submit&&f.role.errors}" >
+              <div *ngIf="f.role.errors.required" class="text-danger">
+                  <div *ngIf="f.role.errors.required">
+                    Role is required
+                  </div>
+                  
+              </div>
+
+              <label for="password">Enter Role:</label>
+              <input type="password" id="password" placeholder="Enter Password" formControlName='password' class="form-control"
+              [ngClass]="{'is-invalid':submit&&f.password.errors}" >
+              <div *ngIf="f.password.errors.required" class="text-danger">
+                  <div *ngIf="f.password.errors.required">
+                    Password is mandatory!!
+                  </div>
+                  
+              </div>
+
+              <label for="confirmPassword">Confirm password:</label>
+              <input type="password" id="confirmPassword" placeholder="Confirm the Password" formControlName='confirmPassword' class="form-control"
+              [ngClass]="{'is-invalid':submit&&f.confirmPassword.errors}" >
+              <div *ngIf="f.confirmPassword.errors.required" class="text-danger">
+                  <div *ngIf="f.confirmPassword.errors.required">
+                   Confirm your  Passowrd !!
+                  </div>
+                  
+              </div>
+
               
         
        <br>
@@ -34,24 +74,3 @@
        
        
        
-        <!-- <div *ngIf= "firstname?.valid&&(firstname?.dirty||firstname?.touched)">
-            <div [hidden]="!firstname?.errors.required">First-Name is required</div>
-            <div [hidden]="!firstname?.errors.minlength">Min Length is 10</div>
-            
-        </div>
-
-        <p>
-            <label for="lastname">Last-Name</label>
-            <input type="text" id='lastname' name='lastname' formControlName='lastname'>
-        </p>
-
-        <div *ngIf="!lastname?.valid&&(lastname.dirty||lastname.touched)">
-            <div [hidden]="!lastname?.errors.pattern"> Only Charecters are allowed  </div>
-            <div [hidden]="!lastname?.errors.maxLength"> Max length 10</div>
-            <div [hidden]="!lastname?.errors.required"> Last-Name required</div>
-        </div>
-
-        
-    </form>
-
-</div> -->
